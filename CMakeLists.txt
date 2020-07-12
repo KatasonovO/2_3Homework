@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.0)
+project(homework2_3)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(SOURCE_EXE main.cpp)
+set(SOURCE_LIB1 library1.cpp)
+add_library(liblib1 SHARED ${SOURCE_LIB1})
+add_executable(homework2_3 ${SOURCE_EXE})
+target_link_libraries(homework2_3 liblib1)
