@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 #include "library1.hpp"
+#include <ctime>
 
-void writeOut(int* dts, std::size_t size_dts);
 
 int main()
 {
@@ -76,15 +76,27 @@ uint8_t precision = 2;
         cout << "destination array less than source" << endl;
     }
 
+	
+	int size_arr = 10;	
+	int ar[size_arr];
+	srand(static_cast<unsigned int>(time(0)));
+
+	for (int i = 0;i < size_arr; i++)
+	{
+		ar[i] = rand()%size_arr;
+	}
+	cout << "Array before sorting:" << endl;
+	writeOut(ar, size_arr);
+
+	sortm(ar, size_arr);
+	cout << "Array after sorting:" << endl;
+	writeOut(ar, size_arr);
+
+	long number = 123456789;	
+	cout << "Print backward " << number << ": ";
+	ptrBackwDecimal(number);
+	cout << endl;
+
     return 0;
 }
 
-void writeOut(int* dts, std::size_t size_dts)
-{
-    cout << "dts = [";
-    for (int i = 0; i < size_dts; i++)
-    {
-         cout << dts[i] << " " ;
-    }
-    cout << "] "<< endl;
-}

@@ -13,5 +13,9 @@ void setBit3(int& src, uint8_t bit);
 
 void revertBit(int& src, uint8_t bit);
 bool addVector(const int*, const int*, const int, int* dts, std::size_t);
+void sortm(int * array, int size);
+void ptrBackwDecimal(long number);
 
+
+void writeOut(int* dts, std::size_t size_dts);
 
